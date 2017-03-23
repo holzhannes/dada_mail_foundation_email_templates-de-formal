@@ -1,0 +1,48 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1><!-- tmpl_var message_subject -->: Gesendet!</h1>
+
+			<p>
+				Der Massenversand hat <!-- tmpl_var addresses_sent_to --> E-Mail-Adressen erreicht.
+			</p>
+			<ul>
+				<li><strong>Massenversand gestartet:</strong>    <!-- tmpl_var mailing_start_time --></li>
+				<li><strong>Massenversand beendet:</strong>      <!-- tmpl_var mailing_finish_time --></li>
+				<li><strong>Gesamtzeit des Massenversands:</strong> <!-- tmpl_var total_mailing_time --></li>
+				<li><strong>Letzte E-Mail gesendet an:</strong> <!-- tmpl_var last_email_send_to --></li>
+			</ul>
+	
+			<p>
+				Hier sind einige Statistiken darüber, wer die E-Mail geöffnet, gelesen
+				und in der E-Mail gelickt hat.  
+			</p>
+
+			<ul>
+				<li><strong>Geöffnet:</strong>    <!-- tmpl_var unique_open --> (<!-- tmpl_var unique_opens_percent -->%)</li>
+				<li><strong>Geklickt:</strong>   <!-- tmpl_var clickthroughs --></li>
+				<li><strong>Abgemeldet:</strong> <!-- tmpl_var unsubscribe --> (<!-- tmpl_var unique_unsubscribes_percent -->%)</li>
+				<!-- tmpl_if errors_sending_to -->
+					<li>
+						<p style="color:red">
+							<strong>Sendefehler:</strong> <!-- tmpl_var errors_sending_to --> (<!-- tmpl_var errors_sending_to_percent -->%)
+						</p>
+					</li>
+				<!-- /tmpl_if -->
+			
+			</ul>
+	
+			<p>
+				Sehen Sie sich die aktuellen Statistiken für diese Nachricht im Tracker-Plugin an. 
+				Diese Satistiken beziehen sich nur auf den Zeitraum vom Start bis zum Ende des Masssenversands.  
+				In der Regel werden viele Personen nach dem Versand dieser Mitteilung in Ihr Postfach schauen.
+			</p>
+
+			<h2>
+				Mach weiter so! 
+			</h2>
+		</columns>
+	</row>
+</container>
+{{> footer}}

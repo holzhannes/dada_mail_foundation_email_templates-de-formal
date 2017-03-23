@@ -1,0 +1,43 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Sie haben einen neuen Abonnenten!
+			</h1>
+			
+
+			<p>
+				<!-- tmpl_var subscriber.email --> ist beigetreten: 
+				<strong>
+					<!-- tmpl_var list_settings.list_name -->
+				</strong>
+			</p>
+
+			<p>
+				Es gibt jetzt insgesamt <! - tmpl_var num_subscribers -> Abonnenten.
+			
+
+			<ul>
+				<li>Serverzeit: <!-- tmpl_var date --></li>
+				<li>IP-Adresse:   <!-- tmpl_var REMOTE_ADDR --></li>
+			</ul>
+				<!-- tmpl_if subscriber -->
+
+				<h4>
+					Zusätzliche Abonnenteninformationen
+				</h4>
+				<ul>
+					<!-- tmpl_loop subscriber --> 
+						<li>
+							<!-- tmpl_var name -->: <!-- tmpl_var value -->
+						</li>
+					<!-- /tmpl_loop -->
+				</ul>
+			<!--/tmpl_if-->
+
+	</row>
+</container>
+
+{{> footer}}

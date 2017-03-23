@@ -1,0 +1,39 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Anfrage für Abonnement
+			</h1>
+			<p>
+				<strong>
+					<!-- tmpl_var subscriber.email -->
+				</strong>
+				möchte folgende Litste abonnieren 
+				<strong>
+					<!-- tmpl_var list_settings.list_name -->
+				</strong>
+			<p>
+			
+			
+			<container>
+				<row>
+					<columns small="12" large="5">
+						<button href="<!-- tmpl_var list_subscribe_request_approve_link -->" class="radius expanded success">				
+							Freigeben
+						</button>
+						</columns>
+						<columns small="12" large="2">
+						</columns>
+						<columns small="12" large="5">
+						<button href="<!-- tmpl_var list_subscribe_request_deny_link -->" class="radius expanded warning">				
+							Ablehnen
+						</button>
+					</columns>
+				</row>
+			</container>
+	</row>
+</container>
+		
+{{> footer}}	

@@ -1,0 +1,30 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Entschuldigung, es ist Ihnen nicht erlaubt E-Mails über diese Mailing-Liste zu verteilen.
+			</h1>
+			
+			<ul>
+				<li><strong>Liste:</strong>    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)</li>
+				<li><strong>Von:</strong>    <!-- tmpl_var subscriber.email --></li>
+				<li><strong>Betreff:</strong> <!-- tmpl_var original_subject --></li>
+			</ul>
+			
+			<p>
+				Ihre Nachricht wurde empfangen, wurde aber nicht über die Mailing-Liste verteilt,  
+				wahrscheinlich sind Sie derzeit kein Abonnent.
+			</p>
+
+			<p>Bitte sehen Sie <a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->">
+				<!-- tmpl_var list_settings.list_name -->'s Hauptbildschirm
+			</a> für weitere Informationen.</p>
+
+			<p>Sie können den Listen-Inhaber über folgende E-Mail-Adresse erreichen: <!-- tmpl_var list_settings.list_owner_email --></p>
+
+		</columns>
+	</row>
+</container>
+
+{{> footer}}

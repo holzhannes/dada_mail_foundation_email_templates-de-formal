@@ -1,0 +1,68 @@
+<wrapper> 
+	<container>
+		<row>
+			<columns small="12" large="12">
+				
+				<spacer size="25"></spacer>
+				
+				<!-- tmpl_if list_settings.show_archives --> 
+					<!-- tmpl_if list_settings.archive_send_form --> 
+						<container>
+							<row>
+								<columns small="12" large="12">
+									<button href="<!-- tmpl_var forward_to_a_friend_link -->" class="small radius expand success">				
+											E-Mail an einen Freund weiterleiten
+									</button>
+								</columns>	
+							</row>
+						</container>
+					<!-- /tmpl_if --> 
+				<!-- /tmpl_if --> 
+
+
+						<h4>
+							<small>
+								Abonnement-Erinnerung
+							</small>
+						</h4>
+					 
+						<p>Sie haben folgende Mailing-Liste(n) abonniert:
+						<strong>
+							<a href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->"> 
+								<!-- tmpl_var list_settings.list_name -->
+							</a>
+						</strong> 
+						und verwenden dafür die E-Mail-Adresse: 
+						<strong>
+							<!-- tmpl_var subscriber.email -->
+						</strong>
+					</p>
+					<container>
+						<row>
+							<columns small="12" large="5">
+									
+					
+								<!-- tmpl_if PROFILE_ENABLED --> 
+									<button href="<!-- tmpl_var PROGRAM_URL -->/profile_login/<!-- tmpl_var subscriber.email_name -->/<!-- tmpl_var subscriber.email_domain -->/" class="tiny radius expanded">				
+										Verwalten Sie Ihr Abonnement
+									</button>
+								<!-- /tmpl_if --> 
+								</columns>
+								<columns small="12" large="2">
+								</columns>
+								<columns small="12" large="5">
+							
+								<button href="<!-- tmpl_var list_unsubscribe_link -->" class="tiny radius expanded">				
+									<!-- tmpl_if list_settings.private_list -->
+										Abonnement beenden
+									<!-- tmpl_else -->
+										Sofort abmelden
+									<!-- /tmpl_if -->
+								</button>
+							</columns>
+						</row>
+					</container>
+			</columns>
+		</row>
+	</container>
+</wrapper>

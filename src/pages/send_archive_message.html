@@ -1,0 +1,45 @@
+{{> banner}}
+
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<spacer size="25"></spacer>
+			
+
+<p>Guten Tag,</p> 
+
+<p>Im Auftrag von: <!-- tmpl_var from_email --> erhalten Sie die folgenden archivierten Nachrichten:</p>
+
+<p><!-- tmpl_var list_settings.list_name --></p>
+
+<p>Es schrieben:</p> 
+
+<p>
+ <em> 
+  <!-- tmpl_var note -->
+ </em> 
+</p>
+
+<p>Es folgen die archivierten Nachricht:</p> 
+
+<p>Sie können die Mailing-Liste <!-- tmpl_var list_settings.list_name --> unter folgendem Link abonnieren:</p>
+
+<p>
+ <a href="<!-- tmpl_var list_subscribe_link -->">
+  <!-- tmpl_var list_subscribe_link -->
+ </a>.
+</p>
+
+<p>Wenn Sie die archivierten Nachricht nicht anzeigen können, besuchen Sie bitte:</p>
+
+<p><a href="<!-- tmpl_var archive_message_url -->"><!-- tmpl_var archive_message_url --></a></p>
+
+		</columns>
+	</row>
+</container>
+
+
+
+
+{{> footer}}

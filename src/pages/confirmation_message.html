@@ -1,0 +1,53 @@
+---
+subject: <!-- tmpl_var list_settings.list_name --> Abonnentbestätigung für Mailing-Liste
+---
+
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Bereit zum Beitritt zu: <!-- tmpl_var list_settings.list_name -->?</h1>
+			</h1>
+			<container>
+				<row>
+					<columns>
+						<center>
+							<button href="<!-- tmpl_var list_confirm_subscribe_link -->" class="large radius success">
+								Abonnement bestätigen
+							</button>
+						</center>
+					</columns>
+				</row>
+			</container>
+			<callout class="primary">
+				<p>
+					<!-- tmpl_var list_settings.info -->
+				</p>
+			</callout>
+			<callout class="warning">
+				<p>
+					<strong>
+						Ihre Privatsphäre ist uns wichtig:
+					</strong>
+					Diese E-Mail ist teil der 
+					<strong>
+						doppelten Bestätigung
+					</strong> 
+					zum Schutz der Privatsphäre des Besitzers dieser E-Mail-Adresse  
+					(das sind Sie!) versendet. Die doppelte Bestätigung garantiert, dass sich nur der Besitzer
+					einer E-Mail-Adresse für eine Mailing-Liste anmelden kann.
+				</p>
+				<p>
+					<strong>
+						Datenschutzerklärung für: <!-- tmpl_var list_settings.list_name -->:
+					</strong>
+					<!-- tmpl_var list_settings.privacy_policy -->
+				</p>
+			</callout>
+		</columns>
+	</row>
+</container>
+
+{{> footer}}

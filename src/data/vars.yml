@@ -1,0 +1,2 @@
+banner_bg_color: '#e9ebee'
+preheader: <!-- tmpl_var email.preheader -->

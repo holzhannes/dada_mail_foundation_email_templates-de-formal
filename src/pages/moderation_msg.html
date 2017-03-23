@@ -1,0 +1,41 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+
+
+			<h1>Moderation notwendig</h1>
+
+			<p>
+				<em>
+					Nachricht ist im Anhang
+				</em>
+			</p>
+
+				<ul>
+				    <li><strong>Liste:</strong>    <!-- tmpl_var list_settings.list_name --></li>
+				    <li><strong>Von:</strong>    <!-- tmpl_var subscriber.email --></li>
+				    <li><strong>Betreff:</strong> <!-- tmpl_var message_subject --></li>
+				</ul>
+			<container>
+				<row>
+					<columns small="12" large="5">
+						<button href=" <!-- tmpl_var moderation_confirmation_link -->" class="radius expanded success">				
+							Freigeben
+						</button>
+						</columns>
+						<columns small="12" large="2">
+						</columns>
+						<columns small="12" large="5">
+						<button href="<!-- tmpl_var moderation_deny_link -->" class="radius expanded warning">				
+							Ablehnen
+						</button>
+					</columns>
+				</row>
+			</container>
+		</columns>
+	</row>
+</container>
+		
+{{> footer}}	

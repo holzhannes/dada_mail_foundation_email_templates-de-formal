@@ -1,0 +1,26 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Abmeldung:
+			</h1>
+			<p>
+				<!-- tmpl_var subscriber.email --> wurde gelöscht aus: 
+				<strong>
+					<!-- tmpl_var list_settings.list_name -->
+				</strong>
+			</p>
+
+			<p>
+				Es gibt jetzt insgesamt <! - tmpl_var num_subscribers -> Abonnenten.
+			
+			<ul>
+				<li>Serverzeit: <!-- tmpl_var date --></li>
+				<li>IP-Adresse:   <!-- tmpl_var REMOTE_ADDR --></li>
+			</ul>
+	</row>
+</container>
+
+{{> footer}}

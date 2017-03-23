@@ -1,0 +1,19 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<ul>
+				<li><strong>Liste:</strong>    <!-- tmpl_var list_settings.list_name --> (<!-- tmpl_var list_settings.discussion_pop_email -->)</li>
+				<li><strong>Von:</strong>    <!-- tmpl_var subscriber.email --></li>
+				<li><strong>Betreff:</strong> <!-- tmpl_var original_subject --></li>
+			</ul>
+
+			<p>Eine Nachricht wurde empfangen, wurde aber nicht über die Mailing-Liste verteilt, wahrscheinlich
+weil <! - tmpl_var subscriber.email -> derzeit kein Abonnent ist. </p> 
+
+		</columns>
+	</row>
+</container>
+
+{{> footer}}

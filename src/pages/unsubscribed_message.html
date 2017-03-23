@@ -1,0 +1,35 @@
+{{> banner}}
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>Abschiedsgruß!</h1>
+			<callout class="success">
+				<p>
+					Sie wurden erfolgreich von folgender Mailing-Liste gelöscht: <!-- tmpl_var list_settings.list_name -->.
+				</p>
+			</callout>
+			<ul>
+				<li>
+					<strong>
+						Datum des Löschvorgangs:
+					</strong> <!-- tmpl_var date -->
+				</li>
+			</ul>
+			<p>
+				Vielen Dank, dass Sie Teil dieser Mailing-Liste waren.
+			</p>
+			<container>
+				<row>
+					<columns>
+						<center>
+							<button href="<!-- tmpl_var PROGRAM_URL -->/list/<!-- tmpl_var list_settings.list -->/" class="large radius success expand">
+								Besuchen Sie uns gerne wieder. <!-- tmpl_var list_settings.list_name -->
+							</button>
+						</center>
+					</columns>
+				</row>
+			</container>
+		</columns>
+	</row>
+</container>
+{{> footer}}

@@ -1,0 +1,39 @@
+{{> banner}}
+
+<container>
+	<row>
+		<columns small="12" large="12">
+			<h1>
+				Antrag auf Entfernung aus Mailing-Liste
+			</h1>
+			<p>
+				<strong>
+					<!-- tmpl_var subscriber.email -->
+				</strong>
+				möchte aus folgenden Mailing-Listen gelöscht werden: 
+				<strong>
+					<!-- tmpl_var list_settings.list_name -->
+				</strong>
+			<p>
+			
+			
+			<container>
+				<row>
+					<columns small="12" large="5">
+						<button href="<!-- tmpl_var list_unsubscribe_request_approve_link --> " class="radius expanded warning">				
+							Freigeben
+						</button>
+						</columns>
+						<columns small="12" large="2">
+						</columns>
+						<columns small="12" large="5">
+						<button href="<!-- tmpl_var list_unsubscribe_request_deny_link --> " class="radius expanded warning">				
+							Ablehnen
+						</button>
+					</columns>
+				</row>
+			</container>
+	</row>
+</container>
+		
+{{> footer}}	

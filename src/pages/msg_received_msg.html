@@ -1,0 +1,24 @@
+{{> banner}}
+	<container>
+		<row>
+			<columns small="12" large="12">
+				<h1>
+					Nachricht erhalten
+				</h1>
+				<p>
+					Danke,  <!-- tmpl_var subscriber.email -->. 
+					Ihre E-Mail mit dem Betreff: 
+					<strong>
+						<!-- tmpl_var original_subject escape="HTML" --></strong> 
+					wird von der Mailing-Liste: 
+					<strong>
+						<!-- tmpl_var list_settings.list_name -->
+					</strong>
+					<em>
+						baldmöglichst verarbeitet werden.
+					</em>
+				</p>
+			</columns>
+		</row>
+	</container>
+{{> footer}}
